@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="wallpaper" >
+    <section class="widget-container">
+        <div id="time-container"> 
+            <a href="./timedate.html">
+                <p id="date" href="./timedate.html"></p>
+                <p id="timeClock" href="./timedate.html"></p>
+                <p id="dailyQuote"></p>
+            </a>
+        </div>
+        <div class="bookmarksApp">
+            <a href="./bookmarks.html"><h2>Bookmarks</h2></a>
+           <section id="fav-form">
+                <form id="fav-name">
+                    <label for="favoritos">Nombre</label>
+                    <input type="text" id="Nombre">
+                </form>
+                <form id="fav-url">
+                    <label for="url">URL</label>
+                    <input type="url" id="url">
+                </form>
+            </section>
+            <button id="saveBtn">Guardar</button>
+            <section id="fav-card">
+            </section>    
+        </div>
+        <div class="passwordApp">
+            <a href="./password.html"><h2>Password Generator</h2> </a>
+                <form class="number">
+                    <input id="passInput" type="number" max="50" min="12" value="0">
+                    <button id="generatePass">Generar</button>
+                </form>
+            <div id="newPass"></div>
+        </div>
+        <div class="weatherApp">
+            <a href="./weather.html">
+                <div id="current"></div>
+                <div class="hours" id="hours"></div>
+            </a>
+        </div>
+        
+    </section>
+    <footer>
+        <ul class="ftrBar">
+            <li><a href="./timedate.html"><ion-icon name="alarm-outline"></ion-icon></a></li>
+            <li><a href="./bookmarks.html"><ion-icon name="bookmarks-outline"></ion-icon></a></li>
+            <li><a href="./password.html"><ion-icon name="apps-outline"></ion-icon></a></li>
+            <li><a href="./weather.html"><ion-icon name="cloudy-night-outline"></ion-icon></a></li>
+        </ul>
+    </footer>
+    
+<script src="../JS/script.js"></script>
+<script src="../JS/timedate.js"></script>
+<script src="../JS/bookmarks.js"></script>
+<script src="../JS/weather.js"></script>
+<script src="../JS/password.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

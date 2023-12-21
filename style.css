@@ -1,0 +1,401 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    font-family:'Courier New', Courier, monospace;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	display: flex;
+    flex-direction: column;
+    width: fit-content;
+    
+}
+
+ol, ul {
+	list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.719);
+    padding: 20px;
+    border-radius: 50px;
+    color: black;
+    width: 650px;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: 
+        url(./assets/wallpapers/bg3.jpg),
+        url(./assets/wallpapers/bg9.jpg),
+        url(./assets/wallpapers/bg8.jpg),
+        url(./assets/wallpapers/bg7.jpg),
+        url(./assets/wallpapers/bg6.jpg),
+        url(./assets/wallpapers/bg5.jpg),
+        url(./assets/wallpapers/bg4.jpg),
+        url(./assets/wallpapers/bg2.jpg),
+        url(./assets/wallpapers/bg1.jpg),
+        url(./assets/wallpapers/bg0.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 1s;
+    background-color: #475b4e;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {color: white;}
+a:hover {color: white;}
+a:active {color: white;}
+a:focus {color: white;}
+
+.widget-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    margin-top: 100px;
+}
+
+section {
+    display: flex;
+    gap:50px;
+}
+
+#time-container {
+    border: solid white 1px;
+    border-radius: 15px;
+    background-color: transparent ;
+    box-shadow: 0px 5px 10px 0px;
+    backdrop-filter: blur(55px);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+#timeClock {
+    color: white;
+    font-size: 45px;
+}
+
+#date {
+    color: white;
+    font-size: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+#widgetCSS {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#dailyQuote {
+    padding-top: 20px;
+    padding-left: 0px;
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#fav-name, #fav-url {
+    position: relative;
+}
+
+#fav-name input, #fav-url input, #passInput {
+    background: none;
+    padding: 0.625rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+}
+
+#fav-name label, #fav-url label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    translate: 0.625rem 0.625rem;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    padding-inline: 0.25rem;
+    border: none;
+    pointer-events: none;
+    transition: translate 250ms,
+                background-color 250ms,
+                border-color 250ms;
+}
+
+#fav-name:focus-within label,
+#fav-name:not(:has(:placeholder-shown))
+#fav-name {
+    translate: 0.625rem -1rem;
+    border-color: white;
+}
+
+#fav-url:focus-within label,
+#fav-url:not(:has(:placeholder-shown))
+#fav-url {
+    translate: 0.625rem -1rem;
+    border-color: white;
+}
+
+#fav-name ::placeholder, #fav-url ::placeholder, #passInput ::placeholder {
+    color: transparent;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+textarea:focus, input:focus {
+    color: white;
+}
+
+.bookmarksApp {
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px;
+    padding: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.212);
+    padding: 10px;
+    border: white solid 1px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+ #bodyTimeDate button {
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+}
+
+.btnCard {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.192);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#eraseBtn {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favcard {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#fav-card {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.passwordApp {
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px;
+    padding: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+#passInput {
+    background: transparent;
+}
+
+#fullpassword {
+    color: white;
+    font-size: 18px;
+    border: white 1px solid;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#current {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 300px;
+    gap: 20px;
+    line-height: 25px;    
+}
+
+#currentIcon {
+    scale: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.weatherApp {
+    border: solid 1px white;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 5px 10px 0px;
+    width: 320px;
+}
+
+#weatherNow {
+    display: flex;
+    flex-direction: row;
+}
+
+#currentCond {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.166);
+    border-radius: 15px;
+}
+
+#hours {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden ;
+}
+
+#hourly-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 5px 20px 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px white solid;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.131);
+}
+
+.ftrBar {
+    color: white;
+    
+}
+
+ion-icon {
+    color: black;
+    scale: 1.5;
+    cursor: pointer;
+    -webkit-transition:  0.3s;
+}
+
+ion-icon:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease-in;
+}
